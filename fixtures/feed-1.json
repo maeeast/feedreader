@@ -1,0 +1,16 @@
+{
+    "feed": {
+        "entries": [
+            {
+                "title": "CSS Tricks sample article 1",
+                "link": "https://example.com/feed-1/article-1",
+                "contentSnippet": "Local demonstration content for feed 1, entry 1."
+            },
+            {
+                "title": "CSS Tricks sample article 2",
+                "link": "https://example.com/feed-1/article-2",
+                "contentSnippet": "Local demonstration content for feed 1, entry 2."
+            }
+        ]
+    }
+}

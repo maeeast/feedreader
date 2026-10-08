@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>UdaciFeeds</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/icomoon.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="stylesheet" href="vendor/jasmine.css">
+
+        <script src="vendor/jasmine.js"></script>
+        <script src="vendor/jasmine-html.js"></script>
+        <script src="vendor/boot.js"></script>
+    </head>
+    <body class="menu-hidden">
+        <div class="header">
+            <a href="#" class="menu-icon-link" aria-label="Toggle feed menu">
+                <i class="icon-list"></i>
+            </a>
+
+            <h1 class="header-title">Feeds</h1>
+        </div>
+
+        <div class="slide-menu">
+            <ul class="feed-list"></ul>
+        </div>
+
+        <p class="data-mode"></p>
+        <p class="feed-status" role="status"></p>
+        <div class="feed"></div>
+
+        <script class="tpl-entry" type="text/x-handlebars-template">
+            <a class="entry-link" href="{{link}}">
+                <article class="entry">
+                    <h2>{{title}}</h2>
+                    <p>{{contentSnippet}}</p>
+                </article>
+            </a>
+        </script>
+
+        <script class="tpl-feed-list-item" type="text/x-handlebars-template">
+            <li>
+                <a href="#" data-id="{{id}}">{{name}}</a>
+            </li>
+        </script>
+
+
+        <script src="vendor/jquery.js"></script>
+        <script src="vendor/handlebars.js"></script>
+        <script>
+            // Jasmine normally starts on window load. Wait for the application's
+            // initial asynchronous render before starting its test suites.
+            window.startFeedReaderTests = window.onload;
+            window.onload = null;
+        </script>
+
+        <script src="js/app.js"></script>
+
+        <script src="jasmine/spec/feedreader.js"></script>
+    </body>
+</html>
